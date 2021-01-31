@@ -41,6 +41,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3174709115
+    locked: 0
+  - name: Walls
+    uniqueID: 707832757
+    locked: 0
   - name: Food
     uniqueID: 1712611895
     locked: 0

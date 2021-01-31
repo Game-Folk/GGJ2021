@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4432569831672876112}
-  - component: {fileID: 4432569831672876115}
   - component: {fileID: 4432569831672876114}
+  - component: {fileID: -6235780860123690462}
   m_Layer: 0
   m_Name: NetMan
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4432569831672876115
+--- !u!114 &4432569831672876114
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,7 +41,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 4432569831672876117}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10c2fd873b12541b392f10ecc4846574, type: 3}
+  m_Script: {fileID: 11500000, guid: 4394a3eef724546f896557197e2d6c44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  showGUI: 1
+  offsetX: 0
+  offsetY: 0
+--- !u!114 &-6235780860123690462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4432569831672876117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 883c8187bc65d4a4db54e15c4364ad68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_NetworkPort: 7777
@@ -56,10 +72,16 @@ MonoBehaviour:
   m_PlayerPrefab: {fileID: 6627961215564130134, guid: 1704b5a79c738904d814b3cd6fed0c44,
     type: 3}
   m_AutoCreatePlayer: 1
-  m_PlayerSpawnMethod: 0
-  m_OfflineScene: 
-  m_OnlineScene: 
-  m_SpawnPrefabs: []
+  m_PlayerSpawnMethod: 1
+  m_OfflineScene: Menu
+  m_OnlineScene: BasicLevel
+  m_SpawnPrefabs:
+  - {fileID: 6627961215564130134, guid: 1704b5a79c738904d814b3cd6fed0c44, type: 3}
+  - {fileID: 4204087364100052223, guid: 7eabeb5cb78bfb74fb6e416966e21bc9, type: 3}
+  - {fileID: 8976616347564439055, guid: d5703ac46071dbe46bf6c89bc2fe61f1, type: 3}
+  - {fileID: 6205964249413580607, guid: f8fbcc81d9717b64eb189bffe7f7785d, type: 3}
+  - {fileID: 7447092410444339131, guid: 627873e298057d542a907c31df0c966f, type: 3}
+  - {fileID: 3297668804701379566, guid: 9a6645eb367ea7c449bec49c15511a5f, type: 3}
   m_CustomConfig: 0
   m_MaxConnections: 4
   m_ConnectionConfig:
@@ -115,19 +137,5 @@ MonoBehaviour:
   matchSize: 4
   isNetworkActive: 0
   matchMaker: {fileID: 0}
---- !u!114 &4432569831672876114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4432569831672876117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4394a3eef724546f896557197e2d6c44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  manager: {fileID: 0}
-  showGUI: 1
-  offsetX: 0
-  offsetY: 0
+  leaderboardPrefab: {fileID: 3297668804701379566, guid: 9a6645eb367ea7c449bec49c15511a5f,
+    type: 3}

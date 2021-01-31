@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 
-public class PlayerMovement : MonoBehaviour
+#pragma warning disable 0618
+public class PlayerMovement : NetworkBehaviour
+#pragma warning restore 0618
 {
     [SerializeField] private float playerSpeed = 1.0f;
 
@@ -16,6 +19,9 @@ public class PlayerMovement : MonoBehaviour
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
     void FixedUpdate()
     {
+        // exit from update if this is not local player
+        if(!isLocalPlayer) return;
+
         //Store the current horizontal input in the float moveHorizontal.
         float moveHorizontal = Input.GetAxis ("Horizontal");
 
